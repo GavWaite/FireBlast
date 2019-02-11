@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AD8FB914221128AA0021CD4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8FB913221128AA0021CD4F /* AppDelegate.swift */; };
+		AD8FB916221128AA0021CD4F /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = AD8FB915221128AA0021CD4F /* GameScene.sks */; };
+		AD8FB918221128AA0021CD4F /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = AD8FB917221128AA0021CD4F /* Actions.sks */; };
+		AD8FB91A221128AA0021CD4F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8FB919221128AA0021CD4F /* GameScene.swift */; };
+		AD8FB91C221128AA0021CD4F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8FB91B221128AA0021CD4F /* GameViewController.swift */; };
+		AD8FB91F221128AA0021CD4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD8FB91D221128AA0021CD4F /* Main.storyboard */; };
+		AD8FB921221128AB0021CD4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD8FB920221128AB0021CD4F /* Assets.xcassets */; };
+		AD8FB924221128AB0021CD4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD8FB922221128AB0021CD4F /* LaunchScreen.storyboard */; };
+		AD8FB92F221128AC0021CD4F /* FireBlastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8FB92E221128AC0021CD4F /* FireBlastTests.swift */; };
+		AD8FB93A221128AC0021CD4F /* FireBlastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8FB939221128AC0021CD4F /* FireBlastUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AD8FB92B221128AC0021CD4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD8FB908221128AA0021CD4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD8FB90F221128AA0021CD4F;
+			remoteInfo = FireBlast;
+		};
+		AD8FB936221128AC0021CD4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD8FB908221128AA0021CD4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD8FB90F221128AA0021CD4F;
+			remoteInfo = FireBlast;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AD8FB910221128AA0021CD4F /* FireBlast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireBlast.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD8FB913221128AA0021CD4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AD8FB915221128AA0021CD4F /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		AD8FB917221128AA0021CD4F /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		AD8FB919221128AA0021CD4F /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		AD8FB91B221128AA0021CD4F /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		AD8FB91E221128AA0021CD4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AD8FB920221128AB0021CD4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AD8FB923221128AB0021CD4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AD8FB925221128AB0021CD4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD8FB92A221128AC0021CD4F /* FireBlastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FireBlastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD8FB92E221128AC0021CD4F /* FireBlastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBlastTests.swift; sourceTree = "<group>"; };
+		AD8FB930221128AC0021CD4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD8FB935221128AC0021CD4F /* FireBlastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FireBlastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD8FB939221128AC0021CD4F /* FireBlastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBlastUITests.swift; sourceTree = "<group>"; };
+		AD8FB93B221128AC0021CD4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AD8FB90D221128AA0021CD4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD8FB927221128AC0021CD4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD8FB932221128AC0021CD4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AD8FB907221128AA0021CD4F = {
+			isa = PBXGroup;
+			children = (
+				AD8FB912221128AA0021CD4F /* FireBlast */,
+				AD8FB92D221128AC0021CD4F /* FireBlastTests */,
+				AD8FB938221128AC0021CD4F /* FireBlastUITests */,
+				AD8FB911221128AA0021CD4F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AD8FB911221128AA0021CD4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AD8FB910221128AA0021CD4F /* FireBlast.app */,
+				AD8FB92A221128AC0021CD4F /* FireBlastTests.xctest */,
+				AD8FB935221128AC0021CD4F /* FireBlastUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD8FB912221128AA0021CD4F /* FireBlast */ = {
+			isa = PBXGroup;
+			children = (
+				AD8FB913221128AA0021CD4F /* AppDelegate.swift */,
+				AD8FB915221128AA0021CD4F /* GameScene.sks */,
+				AD8FB917221128AA0021CD4F /* Actions.sks */,
+				AD8FB919221128AA0021CD4F /* GameScene.swift */,
+				AD8FB91B221128AA0021CD4F /* GameViewController.swift */,
+				AD8FB91D221128AA0021CD4F /* Main.storyboard */,
+				AD8FB920221128AB0021CD4F /* Assets.xcassets */,
+				AD8FB922221128AB0021CD4F /* LaunchScreen.storyboard */,
+				AD8FB925221128AB0021CD4F /* Info.plist */,
+			);
+			path = FireBlast;
+			sourceTree = "<group>";
+		};
+		AD8FB92D221128AC0021CD4F /* FireBlastTests */ = {
+			isa = PBXGroup;
+			children = (
+				AD8FB92E221128AC0021CD4F /* FireBlastTests.swift */,
+				AD8FB930221128AC0021CD4F /* Info.plist */,
+			);
+			path = FireBlastTests;
+			sourceTree = "<group>";
+		};
+		AD8FB938221128AC0021CD4F /* FireBlastUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AD8FB939221128AC0021CD4F /* FireBlastUITests.swift */,
+				AD8FB93B221128AC0021CD4F /* Info.plist */,
+			);
+			path = FireBlastUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AD8FB90F221128AA0021CD4F /* FireBlast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD8FB93E221128AC0021CD4F /* Build configuration list for PBXNativeTarget "FireBlast" */;
+			buildPhases = (
+				AD8FB90C221128AA0021CD4F /* Sources */,
+				AD8FB90D221128AA0021CD4F /* Frameworks */,
+				AD8FB90E221128AA0021CD4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FireBlast;
+			productName = FireBlast;
+			productReference = AD8FB910221128AA0021CD4F /* FireBlast.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AD8FB929221128AC0021CD4F /* FireBlastTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD8FB941221128AC0021CD4F /* Build configuration list for PBXNativeTarget "FireBlastTests" */;
+			buildPhases = (
+				AD8FB926221128AC0021CD4F /* Sources */,
+				AD8FB927221128AC0021CD4F /* Frameworks */,
+				AD8FB928221128AC0021CD4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD8FB92C221128AC0021CD4F /* PBXTargetDependency */,
+			);
+			name = FireBlastTests;
+			productName = FireBlastTests;
+			productReference = AD8FB92A221128AC0021CD4F /* FireBlastTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AD8FB934221128AC0021CD4F /* FireBlastUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD8FB944221128AC0021CD4F /* Build configuration list for PBXNativeTarget "FireBlastUITests" */;
+			buildPhases = (
+				AD8FB931221128AC0021CD4F /* Sources */,
+				AD8FB932221128AC0021CD4F /* Frameworks */,
+				AD8FB933221128AC0021CD4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD8FB937221128AC0021CD4F /* PBXTargetDependency */,
+			);
+			name = FireBlastUITests;
+			productName = FireBlastUITests;
+			productReference = AD8FB935221128AC0021CD4F /* FireBlastUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AD8FB908221128AA0021CD4F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = GavinWaite;
+				TargetAttributes = {
+					AD8FB90F221128AA0021CD4F = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					AD8FB929221128AC0021CD4F = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = AD8FB90F221128AA0021CD4F;
+					};
+					AD8FB934221128AC0021CD4F = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = AD8FB90F221128AA0021CD4F;
+					};
+				};
+			};
+			buildConfigurationList = AD8FB90B221128AA0021CD4F /* Build configuration list for PBXProject "FireBlast" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AD8FB907221128AA0021CD4F;
+			productRefGroup = AD8FB911221128AA0021CD4F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AD8FB90F221128AA0021CD4F /* FireBlast */,
+				AD8FB929221128AC0021CD4F /* FireBlastTests */,
+				AD8FB934221128AC0021CD4F /* FireBlastUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AD8FB90E221128AA0021CD4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD8FB91F221128AA0021CD4F /* Main.storyboard in Resources */,
+				AD8FB916221128AA0021CD4F /* GameScene.sks in Resources */,
+				AD8FB921221128AB0021CD4F /* Assets.xcassets in Resources */,
+				AD8FB924221128AB0021CD4F /* LaunchScreen.storyboard in Resources */,
+				AD8FB918221128AA0021CD4F /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD8FB928221128AC0021CD4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD8FB933221128AC0021CD4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AD8FB90C221128AA0021CD4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD8FB91A221128AA0021CD4F /* GameScene.swift in Sources */,
+				AD8FB91C221128AA0021CD4F /* GameViewController.swift in Sources */,
+				AD8FB914221128AA0021CD4F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD8FB926221128AC0021CD4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD8FB92F221128AC0021CD4F /* FireBlastTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD8FB931221128AC0021CD4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD8FB93A221128AC0021CD4F /* FireBlastUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AD8FB92C221128AC0021CD4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD8FB90F221128AA0021CD4F /* FireBlast */;
+			targetProxy = AD8FB92B221128AC0021CD4F /* PBXContainerItemProxy */;
+		};
+		AD8FB937221128AC0021CD4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD8FB90F221128AA0021CD4F /* FireBlast */;
+			targetProxy = AD8FB936221128AC0021CD4F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AD8FB91D221128AA0021CD4F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD8FB91E221128AA0021CD4F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AD8FB922221128AB0021CD4F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD8FB923221128AB0021CD4F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AD8FB93C221128AC0021CD4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AD8FB93D221128AC0021CD4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AD8FB93F221128AC0021CD4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FCQHJR525J;
+				INFOPLIST_FILE = FireBlast/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = waite.gavin.FireBlast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AD8FB940221128AC0021CD4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FCQHJR525J;
+				INFOPLIST_FILE = FireBlast/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = waite.gavin.FireBlast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AD8FB942221128AC0021CD4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FCQHJR525J;
+				INFOPLIST_FILE = FireBlastTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = waite.gavin.FireBlastTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FireBlast.app/FireBlast";
+			};
+			name = Debug;
+		};
+		AD8FB943221128AC0021CD4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FCQHJR525J;
+				INFOPLIST_FILE = FireBlastTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = waite.gavin.FireBlastTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FireBlast.app/FireBlast";
+			};
+			name = Release;
+		};
+		AD8FB945221128AC0021CD4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FCQHJR525J;
+				INFOPLIST_FILE = FireBlastUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = waite.gavin.FireBlastUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FireBlast;
+			};
+			name = Debug;
+		};
+		AD8FB946221128AC0021CD4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FCQHJR525J;
+				INFOPLIST_FILE = FireBlastUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = waite.gavin.FireBlastUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FireBlast;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AD8FB90B221128AA0021CD4F /* Build configuration list for PBXProject "FireBlast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD8FB93C221128AC0021CD4F /* Debug */,
+				AD8FB93D221128AC0021CD4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD8FB93E221128AC0021CD4F /* Build configuration list for PBXNativeTarget "FireBlast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD8FB93F221128AC0021CD4F /* Debug */,
+				AD8FB940221128AC0021CD4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD8FB941221128AC0021CD4F /* Build configuration list for PBXNativeTarget "FireBlastTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD8FB942221128AC0021CD4F /* Debug */,
+				AD8FB943221128AC0021CD4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD8FB944221128AC0021CD4F /* Build configuration list for PBXNativeTarget "FireBlastUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD8FB945221128AC0021CD4F /* Debug */,
+				AD8FB946221128AC0021CD4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AD8FB908221128AA0021CD4F /* Project object */;
+}
