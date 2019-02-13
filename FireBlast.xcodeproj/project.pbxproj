@@ -17,6 +17,12 @@
 		AD8FB924221128AB0021CD4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD8FB922221128AB0021CD4F /* LaunchScreen.storyboard */; };
 		AD8FB92F221128AC0021CD4F /* FireBlastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8FB92E221128AC0021CD4F /* FireBlastTests.swift */; };
 		AD8FB93A221128AC0021CD4F /* FireBlastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8FB939221128AC0021CD4F /* FireBlastUITests.swift */; };
+		AD8FB9492213B9870021CD4F /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8FB9482213B9870021CD4F /* GameState.swift */; };
+		AD8FB94C2213C3470021CD4F /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8FB94B2213C3470021CD4F /* MainMenuViewController.swift */; };
+		AD8FB94F2213D1C30021CD4F /* HighscoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8FB94E2213D1C30021CD4F /* HighscoresViewController.swift */; };
+		AD8FB9512213D1F50021CD4F /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8FB9502213D1F50021CD4F /* TutorialViewController.swift */; };
+		AD8FB9532213D2140021CD4F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8FB9522213D2140021CD4F /* SettingsViewController.swift */; };
+		AD8FB9552213D2330021CD4F /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8FB9542213D2330021CD4F /* GameOverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,12 @@
 		AD8FB935221128AC0021CD4F /* FireBlastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FireBlastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD8FB939221128AC0021CD4F /* FireBlastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBlastUITests.swift; sourceTree = "<group>"; };
 		AD8FB93B221128AC0021CD4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD8FB9482213B9870021CD4F /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		AD8FB94B2213C3470021CD4F /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		AD8FB94E2213D1C30021CD4F /* HighscoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighscoresViewController.swift; sourceTree = "<group>"; };
+		AD8FB9502213D1F50021CD4F /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		AD8FB9522213D2140021CD4F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		AD8FB9542213D2330021CD4F /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +115,12 @@
 		AD8FB912221128AA0021CD4F /* FireBlast */ = {
 			isa = PBXGroup;
 			children = (
-				AD8FB913221128AA0021CD4F /* AppDelegate.swift */,
-				AD8FB915221128AA0021CD4F /* GameScene.sks */,
-				AD8FB917221128AA0021CD4F /* Actions.sks */,
-				AD8FB919221128AA0021CD4F /* GameScene.swift */,
-				AD8FB91B221128AA0021CD4F /* GameViewController.swift */,
 				AD8FB91D221128AA0021CD4F /* Main.storyboard */,
+				AD8FB913221128AA0021CD4F /* AppDelegate.swift */,
+				AD8FB9472213B94D0021CD4F /* Models */,
+				AD8FB94D2213C4050021CD4F /* Game Scene View */,
+				AD8FB94A2213C31E0021CD4F /* ViewControllers */,
+				AD8FB917221128AA0021CD4F /* Actions.sks */,
 				AD8FB920221128AB0021CD4F /* Assets.xcassets */,
 				AD8FB922221128AB0021CD4F /* LaunchScreen.storyboard */,
 				AD8FB925221128AB0021CD4F /* Info.plist */,
@@ -132,6 +144,36 @@
 				AD8FB93B221128AC0021CD4F /* Info.plist */,
 			);
 			path = FireBlastUITests;
+			sourceTree = "<group>";
+		};
+		AD8FB9472213B94D0021CD4F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AD8FB9482213B9870021CD4F /* GameState.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AD8FB94A2213C31E0021CD4F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AD8FB94B2213C3470021CD4F /* MainMenuViewController.swift */,
+				AD8FB91B221128AA0021CD4F /* GameViewController.swift */,
+				AD8FB9542213D2330021CD4F /* GameOverViewController.swift */,
+				AD8FB94E2213D1C30021CD4F /* HighscoresViewController.swift */,
+				AD8FB9502213D1F50021CD4F /* TutorialViewController.swift */,
+				AD8FB9522213D2140021CD4F /* SettingsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AD8FB94D2213C4050021CD4F /* Game Scene View */ = {
+			isa = PBXGroup;
+			children = (
+				AD8FB915221128AA0021CD4F /* GameScene.sks */,
+				AD8FB919221128AA0021CD4F /* GameScene.swift */,
+			);
+			path = "Game Scene View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,8 +310,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD8FB91A221128AA0021CD4F /* GameScene.swift in Sources */,
+				AD8FB9512213D1F50021CD4F /* TutorialViewController.swift in Sources */,
+				AD8FB94C2213C3470021CD4F /* MainMenuViewController.swift in Sources */,
 				AD8FB91C221128AA0021CD4F /* GameViewController.swift in Sources */,
 				AD8FB914221128AA0021CD4F /* AppDelegate.swift in Sources */,
+				AD8FB9492213B9870021CD4F /* GameState.swift in Sources */,
+				AD8FB94F2213D1C30021CD4F /* HighscoresViewController.swift in Sources */,
+				AD8FB9532213D2140021CD4F /* SettingsViewController.swift in Sources */,
+				AD8FB9552213D2330021CD4F /* GameOverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
