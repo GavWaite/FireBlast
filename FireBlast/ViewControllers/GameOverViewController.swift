@@ -17,7 +17,12 @@ class GameOverViewController : UIViewController {
         super.viewDidLoad()
         
         // Set up any programmatic text or elements for the Game Over Screen here
+    
         
     }
+    
+    // Add a method to save your name and highscore
+    // Maybe list previous users?
+    // If new highscore for that user then alert them
     
 }

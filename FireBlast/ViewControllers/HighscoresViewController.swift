@@ -20,4 +20,6 @@ class HighscoresViewController : UIViewController {
         
     }
     
+    // Need a table view for the Highscores
+    
 }

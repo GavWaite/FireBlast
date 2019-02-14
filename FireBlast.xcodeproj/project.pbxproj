@@ -23,6 +23,17 @@
 		AD8FB9512213D1F50021CD4F /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8FB9502213D1F50021CD4F /* TutorialViewController.swift */; };
 		AD8FB9532213D2140021CD4F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8FB9522213D2140021CD4F /* SettingsViewController.swift */; };
 		AD8FB9552213D2330021CD4F /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8FB9542213D2330021CD4F /* GameOverViewController.swift */; };
+		AD8FB9572214EA790021CD4F /* EmitterPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8FB9562214EA790021CD4F /* EmitterPaths.swift */; };
+		AD8FB9622214EAC70021CD4F /* flameTrail.sks in Resources */ = {isa = PBXBuildFile; fileRef = AD8FB9592214EAC60021CD4F /* flameTrail.sks */; };
+		AD8FB9632214EAC70021CD4F /* OrangeFireworksSparks.sks in Resources */ = {isa = PBXBuildFile; fileRef = AD8FB95A2214EAC60021CD4F /* OrangeFireworksSparks.sks */; };
+		AD8FB9642214EAC70021CD4F /* PurpleFireworksSparks.sks in Resources */ = {isa = PBXBuildFile; fileRef = AD8FB95B2214EAC60021CD4F /* PurpleFireworksSparks.sks */; };
+		AD8FB9652214EAC70021CD4F /* GreenFireworksSparks.sks in Resources */ = {isa = PBXBuildFile; fileRef = AD8FB95C2214EAC60021CD4F /* GreenFireworksSparks.sks */; };
+		AD8FB9662214EAC70021CD4F /* 75328__oddworld__oddworld-explosionecho.wav in Resources */ = {isa = PBXBuildFile; fileRef = AD8FB95D2214EAC60021CD4F /* 75328__oddworld__oddworld-explosionecho.wav */; };
+		AD8FB9672214EAC70021CD4F /* 202230__deraj__pop-sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = AD8FB95E2214EAC60021CD4F /* 202230__deraj__pop-sound.wav */; };
+		AD8FB9682214EAC70021CD4F /* BlueFireworksSparks.sks in Resources */ = {isa = PBXBuildFile; fileRef = AD8FB95F2214EAC70021CD4F /* BlueFireworksSparks.sks */; };
+		AD8FB9692214EAC70021CD4F /* PinkFireworksSparks.sks in Resources */ = {isa = PBXBuildFile; fileRef = AD8FB9602214EAC70021CD4F /* PinkFireworksSparks.sks */; };
+		AD8FB96A2214EAC70021CD4F /* YellowFireworksSparks.sks in Resources */ = {isa = PBXBuildFile; fileRef = AD8FB9612214EAC70021CD4F /* YellowFireworksSparks.sks */; };
+		AD8FB96E2214FC900021CD4F /* RedFireworksSparks.sks in Resources */ = {isa = PBXBuildFile; fileRef = AD8FB96D2214FC900021CD4F /* RedFireworksSparks.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +76,17 @@
 		AD8FB9502213D1F50021CD4F /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		AD8FB9522213D2140021CD4F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		AD8FB9542213D2330021CD4F /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
+		AD8FB9562214EA790021CD4F /* EmitterPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterPaths.swift; sourceTree = "<group>"; };
+		AD8FB9592214EAC60021CD4F /* flameTrail.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = flameTrail.sks; sourceTree = "<group>"; };
+		AD8FB95A2214EAC60021CD4F /* OrangeFireworksSparks.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = OrangeFireworksSparks.sks; sourceTree = "<group>"; };
+		AD8FB95B2214EAC60021CD4F /* PurpleFireworksSparks.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PurpleFireworksSparks.sks; sourceTree = "<group>"; };
+		AD8FB95C2214EAC60021CD4F /* GreenFireworksSparks.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GreenFireworksSparks.sks; sourceTree = "<group>"; };
+		AD8FB95D2214EAC60021CD4F /* 75328__oddworld__oddworld-explosionecho.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "75328__oddworld__oddworld-explosionecho.wav"; sourceTree = "<group>"; };
+		AD8FB95E2214EAC60021CD4F /* 202230__deraj__pop-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "202230__deraj__pop-sound.wav"; sourceTree = "<group>"; };
+		AD8FB95F2214EAC70021CD4F /* BlueFireworksSparks.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BlueFireworksSparks.sks; sourceTree = "<group>"; };
+		AD8FB9602214EAC70021CD4F /* PinkFireworksSparks.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PinkFireworksSparks.sks; sourceTree = "<group>"; };
+		AD8FB9612214EAC70021CD4F /* YellowFireworksSparks.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = YellowFireworksSparks.sks; sourceTree = "<group>"; };
+		AD8FB96D2214FC900021CD4F /* RedFireworksSparks.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RedFireworksSparks.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +144,7 @@
 				AD8FB94A2213C31E0021CD4F /* ViewControllers */,
 				AD8FB917221128AA0021CD4F /* Actions.sks */,
 				AD8FB920221128AB0021CD4F /* Assets.xcassets */,
+				AD8FB9582214EA940021CD4F /* Resources */,
 				AD8FB922221128AB0021CD4F /* LaunchScreen.storyboard */,
 				AD8FB925221128AB0021CD4F /* Info.plist */,
 			);
@@ -150,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				AD8FB9482213B9870021CD4F /* GameState.swift */,
+				AD8FB9562214EA790021CD4F /* EmitterPaths.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -174,6 +198,39 @@
 				AD8FB919221128AA0021CD4F /* GameScene.swift */,
 			);
 			path = "Game Scene View";
+			sourceTree = "<group>";
+		};
+		AD8FB9582214EA940021CD4F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AD8FB96C2214EADE0021CD4F /* Particle Effects */,
+				AD8FB96B2214EACE0021CD4F /* Sound Effects */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AD8FB96B2214EACE0021CD4F /* Sound Effects */ = {
+			isa = PBXGroup;
+			children = (
+				AD8FB95D2214EAC60021CD4F /* 75328__oddworld__oddworld-explosionecho.wav */,
+				AD8FB95E2214EAC60021CD4F /* 202230__deraj__pop-sound.wav */,
+			);
+			path = "Sound Effects";
+			sourceTree = "<group>";
+		};
+		AD8FB96C2214EADE0021CD4F /* Particle Effects */ = {
+			isa = PBXGroup;
+			children = (
+				AD8FB96D2214FC900021CD4F /* RedFireworksSparks.sks */,
+				AD8FB95F2214EAC70021CD4F /* BlueFireworksSparks.sks */,
+				AD8FB9592214EAC60021CD4F /* flameTrail.sks */,
+				AD8FB95C2214EAC60021CD4F /* GreenFireworksSparks.sks */,
+				AD8FB95A2214EAC60021CD4F /* OrangeFireworksSparks.sks */,
+				AD8FB9602214EAC70021CD4F /* PinkFireworksSparks.sks */,
+				AD8FB95B2214EAC60021CD4F /* PurpleFireworksSparks.sks */,
+				AD8FB9612214EAC70021CD4F /* YellowFireworksSparks.sks */,
+			);
+			path = "Particle Effects";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,10 +337,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD8FB96A2214EAC70021CD4F /* YellowFireworksSparks.sks in Resources */,
+				AD8FB9672214EAC70021CD4F /* 202230__deraj__pop-sound.wav in Resources */,
+				AD8FB9642214EAC70021CD4F /* PurpleFireworksSparks.sks in Resources */,
+				AD8FB9682214EAC70021CD4F /* BlueFireworksSparks.sks in Resources */,
 				AD8FB91F221128AA0021CD4F /* Main.storyboard in Resources */,
 				AD8FB916221128AA0021CD4F /* GameScene.sks in Resources */,
 				AD8FB921221128AB0021CD4F /* Assets.xcassets in Resources */,
 				AD8FB924221128AB0021CD4F /* LaunchScreen.storyboard in Resources */,
+				AD8FB9692214EAC70021CD4F /* PinkFireworksSparks.sks in Resources */,
+				AD8FB9662214EAC70021CD4F /* 75328__oddworld__oddworld-explosionecho.wav in Resources */,
+				AD8FB9622214EAC70021CD4F /* flameTrail.sks in Resources */,
+				AD8FB9652214EAC70021CD4F /* GreenFireworksSparks.sks in Resources */,
+				AD8FB96E2214FC900021CD4F /* RedFireworksSparks.sks in Resources */,
+				AD8FB9632214EAC70021CD4F /* OrangeFireworksSparks.sks in Resources */,
 				AD8FB918221128AA0021CD4F /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,6 +385,7 @@
 				AD8FB94F2213D1C30021CD4F /* HighscoresViewController.swift in Sources */,
 				AD8FB9532213D2140021CD4F /* SettingsViewController.swift in Sources */,
 				AD8FB9552213D2330021CD4F /* GameOverViewController.swift in Sources */,
+				AD8FB9572214EA790021CD4F /* EmitterPaths.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

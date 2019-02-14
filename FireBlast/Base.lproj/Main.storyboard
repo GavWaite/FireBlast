@@ -20,9 +20,13 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                     </view>
+                    <connections>
+                        <segue destination="9af-UM-NJf" kind="show" identifier="gameOver" id="mXl-KG-8Aj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="538" y="23"/>
         </scene>
         <!--Game Over View Controller-->
         <scene sceneID="JxF-AL-m5k">

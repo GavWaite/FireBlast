@@ -18,6 +18,10 @@ class MainMenuViewController : UIViewController {
         
         // Set up any programmatic text or elements for the MainMenu here
         
+        // Maybe load the saved data here?
+        
     }
+    
+    // Could I add a system to go to tutorial the first time you press Play?
     
 }

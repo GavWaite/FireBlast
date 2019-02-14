@@ -20,4 +20,9 @@ class TutorialViewController : UIViewController {
         
     }
     
+    // Could look up PageView to do the dot pages thing like in the original version
+    // Just explain the rules
+    
+    // Add a play button at the end so don't have to go to the main menu again
+    
 }

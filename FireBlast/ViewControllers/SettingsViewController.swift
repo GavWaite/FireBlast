@@ -20,4 +20,15 @@ class SettingsViewController : UIViewController {
         
     }
     
+    // Ideas for settings
+    // - Volume
+    // - Mute all sounds
+    
+    // Maybe some dev gameplay tuning settings for the DEBUG release
+    // - FPS / Node counter
+    // - Firework speed
+    // - Firework count
+    // - Cutoff values
+    // - Round wait time etc.
+    
 }
