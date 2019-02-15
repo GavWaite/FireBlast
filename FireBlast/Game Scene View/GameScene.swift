@@ -42,6 +42,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
     
+    
     //https://developer.apple.com/library/prerelease/ios/documentation/SpriteKit/Reference/SKPhysicsBody_Ref/#//apple_ref/occ/instp/SKPhysicsBody/collisionBitMask
     //http://www.techotopia.com/index.php/A_Swift_iOS_8_Sprite_Kit_Collision_Handling_Tutorial
     // Set the collison mask categories
@@ -68,18 +69,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func sceneDidLoad() {
         
-        // DEBUG
-        if let redString = Bundle.main.path(forResource: "RedFireworksSparks", ofType: "sks"){
-            print("Red String path is \(redString)")
-        }
-        else {
-            print("Could nae find it")
-        }
-        
         // Rocket size scaling calculation
-        // w is set to 5% of the width+height
-        let w = (self.size.width + self.size.height) * 0.05
-        rocketSize = CGSize(width: w, height: w)
+        // w is set to 7% of the width+height
+        let w = (self.size.width + self.size.height) * 0.07
+        rocketSize = CGSize(width: (w/2), height: w)
         
         // Initialise Game State
         gameState = GameState()
@@ -157,6 +150,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     }
     
+
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         /* Called when a touch begins */
         print("i touched something")
@@ -174,6 +169,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
             // A rocket has been tapped to explode
+            // As a named node has been tapped, safe to assume it is a rocket
+            // TODO - could surely merge this code somehow
             if let nameN = node.name {
                 let center = NotificationCenter.default
                 let notification = Notification(name: Notification.Name(rawValue: "fireworkTouched"), object: self)
@@ -268,7 +265,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         let direction = contact.contactNormal.dy
         
-        if direction == 1.0 { // Direction 1.0 means straight down, as apposed to the -1.0 when rocket launches
+        // Direction 1.0 means straight down, as apposed to the -1.0 when rocket launches
+        // So this is where a rocket falls out of the screen - a 'miss'
+        if direction == 1.0 {
             b.node!.removeFromParent()
             gameState!.lives -= 1
             if gameState!.lives < 1 {
@@ -280,7 +279,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     ///////////////////////////// Observering and Timing ///////////////////////////////////////////////
     func startObservers() {
         let center = NotificationCenter.default
-        //let uiQueue = OperationQueue.main
+        //let uiQueue = OperationQueue.main // Doesn't do anything?
         center.addObserver(self, selector: #selector(GameScene.addToScore), name: NSNotification.Name(rawValue: "fireworkTouched"), object: nil)
     }
     
@@ -297,15 +296,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     @objc func handleTimer() {
+        // Decrease the interval time between rockets with each rocket (they speed up)
         if gameState!.intervalTime > 0.5{
             gameState!.intervalTime = gameState!.intervalTime - 0.02
         }
         
+        // Every 5000 score, increment the 'phase'
         if gameState!.score / gameState!.phase > 5000 {
             gameState!.phase += 1
             gameState!.intervalTime = 1.5
         }
         
+        // Launch number of rockets equal to phase - this increases 'difficulty'
         for _ in 1...gameState!.phase {
             setUpNewRocket()
         }
@@ -326,7 +328,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.removeAllChildren()
         let center = NotificationCenter.default
         let notification = Notification(
-            name: Notification.Name(rawValue: "goToGameOver"), object: self)
+            name: Notification.Name(rawValue: "goToGameOver"), object: self, userInfo:["score":gameState?.score ?? 0])
         center.post(notification)
     }
     
@@ -341,6 +343,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //http://goobbe.com/questions/4782463/adding-emitter-node-to-sks-file-and-using-it-xcode-6-0-swift
         // Load the correct explosion SKEmitterNode
         explosion = NSKeyedUnarchiver.unarchiveObject(withFile: emitters!.emitterPathDictionary[color]!) as! SKEmitterNode
+        
         
         // Add the explosion emitter
         let deathLoc = node.position
@@ -485,8 +488,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         trail.name = "trail\(numberOfRockets)"
         
         // Decide where to randomly launch the rocket from
-        let leftX = Int(self.frame.minX) + 30
-        let rightX = Int(self.frame.maxX) - 30
+        let leftX = Int(self.frame.minX) + 100
+        let rightX = Int(self.frame.maxX) - 100
         let Xdistance = rightX - leftX
         let Xposition = leftX + Int(arc4random_uniform(UInt32(Xdistance)))
         let Yposition = Int(self.frame.minY)

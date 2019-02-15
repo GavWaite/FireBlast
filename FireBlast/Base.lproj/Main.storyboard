@@ -51,14 +51,40 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLx-rt-WVE">
+                                <rect key="frame" x="128" y="436" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Local Highscores"/>
+                                <connections>
+                                    <segue destination="Ymm-7B-scf" kind="show" id="cTf-co-ELz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mq0-2k-2cN">
+                                <rect key="frame" x="124" y="483" width="126" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Global Highscores"/>
+                                <connections>
+                                    <action selector="showLeaderboard" destination="9af-UM-NJf" eventType="touchUpInside" id="Qb3-Th-8Jc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="scoreLabel" text="0000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ine-ON-oeG">
+                                <rect key="frame" x="135" y="116" width="105" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Sbr-it-KUE"/>
                     </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="Ine-ON-oeG" id="CKJ-Xx-sDP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S7n-3n-t4H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1905" y="23"/>
+            <point key="canvasLocation" x="1904.8" y="22.906403940886701"/>
         </scene>
         <!--Highscores View Controller-->
         <scene sceneID="XDe-SO-UZE">
@@ -215,6 +241,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rm1-81-HYF"/>
+        <segue reference="LuF-yX-Vhv"/>
+        <segue reference="cTf-co-ELz"/>
     </inferredMetricsTieBreakers>
 </document>

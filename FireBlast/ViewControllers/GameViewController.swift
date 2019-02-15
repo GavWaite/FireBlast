@@ -11,7 +11,9 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
-
+    
+    var latestScore = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         startObservers()
@@ -68,11 +70,22 @@ class GameViewController: UIViewController {
     func startObservers() {
         let center = NotificationCenter.default
         let uiQueue = OperationQueue.main
-        center.addObserver(self, selector: #selector(GameViewController.gameOver), name: NSNotification.Name(rawValue: "goToGameOver"), object: nil)
+        center.addObserver(self, selector: #selector(GameViewController.gameOver(notification:)), name: NSNotification.Name(rawValue: "goToGameOver"), object: nil)
     }
     
     // http://stackoverflow.com/questions/21578391/presenting-uiviewcontroller-from-skscene
-    @objc func gameOver() {
+    @objc func gameOver(notification:Notification) {
+        latestScore = notification.userInfo?["score"] as! Int
         self.performSegue(withIdentifier: "gameOver", sender: self)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is GameOverViewController
+        {
+            let vc = segue.destination as? GameOverViewController
+            vc?.latestScore = latestScore
+        }
+    }
+    
 }

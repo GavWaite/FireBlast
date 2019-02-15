@@ -34,6 +34,8 @@
 		AD8FB9692214EAC70021CD4F /* PinkFireworksSparks.sks in Resources */ = {isa = PBXBuildFile; fileRef = AD8FB9602214EAC70021CD4F /* PinkFireworksSparks.sks */; };
 		AD8FB96A2214EAC70021CD4F /* YellowFireworksSparks.sks in Resources */ = {isa = PBXBuildFile; fileRef = AD8FB9612214EAC70021CD4F /* YellowFireworksSparks.sks */; };
 		AD8FB96E2214FC900021CD4F /* RedFireworksSparks.sks in Resources */ = {isa = PBXBuildFile; fileRef = AD8FB96D2214FC900021CD4F /* RedFireworksSparks.sks */; };
+		AD8FB9702216154A0021CD4F /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = AD8FB96F2216154A0021CD4F /* spark.png */; };
+		AD8FB97322161AFC0021CD4F /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD8FB97222161AFC0021CD4F /* GameKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		AD8FB9602214EAC70021CD4F /* PinkFireworksSparks.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PinkFireworksSparks.sks; sourceTree = "<group>"; };
 		AD8FB9612214EAC70021CD4F /* YellowFireworksSparks.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = YellowFireworksSparks.sks; sourceTree = "<group>"; };
 		AD8FB96D2214FC900021CD4F /* RedFireworksSparks.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RedFireworksSparks.sks; sourceTree = "<group>"; };
+		AD8FB96F2216154A0021CD4F /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		AD8FB97222161AFC0021CD4F /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD8FB97322161AFC0021CD4F /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +126,7 @@
 				AD8FB92D221128AC0021CD4F /* FireBlastTests */,
 				AD8FB938221128AC0021CD4F /* FireBlastUITests */,
 				AD8FB911221128AA0021CD4F /* Products */,
+				AD8FB97122161AFC0021CD4F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -221,6 +227,7 @@
 		AD8FB96C2214EADE0021CD4F /* Particle Effects */ = {
 			isa = PBXGroup;
 			children = (
+				AD8FB96F2216154A0021CD4F /* spark.png */,
 				AD8FB96D2214FC900021CD4F /* RedFireworksSparks.sks */,
 				AD8FB95F2214EAC70021CD4F /* BlueFireworksSparks.sks */,
 				AD8FB9592214EAC60021CD4F /* flameTrail.sks */,
@@ -231,6 +238,14 @@
 				AD8FB9612214EAC70021CD4F /* YellowFireworksSparks.sks */,
 			);
 			path = "Particle Effects";
+			sourceTree = "<group>";
+		};
+		AD8FB97122161AFC0021CD4F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD8FB97222161AFC0021CD4F /* GameKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +316,11 @@
 				TargetAttributes = {
 					AD8FB90F221128AA0021CD4F = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.GameCenter.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					AD8FB929221128AC0021CD4F = {
 						CreatedOnToolsVersion = 10.1;
@@ -350,6 +370,7 @@
 				AD8FB9622214EAC70021CD4F /* flameTrail.sks in Resources */,
 				AD8FB9652214EAC70021CD4F /* GreenFireworksSparks.sks in Resources */,
 				AD8FB96E2214FC900021CD4F /* RedFireworksSparks.sks in Resources */,
+				AD8FB9702216154A0021CD4F /* spark.png in Resources */,
 				AD8FB9632214EAC70021CD4F /* OrangeFireworksSparks.sks in Resources */,
 				AD8FB918221128AA0021CD4F /* Actions.sks in Resources */,
 			);
@@ -570,7 +591,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = waite.gavin.FireBlast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -588,7 +609,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = waite.gavin.FireBlast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
