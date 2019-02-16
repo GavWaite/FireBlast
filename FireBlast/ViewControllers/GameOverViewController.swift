@@ -20,6 +20,9 @@ class GameOverViewController : UIViewController, GKGameCenterControllerDelegate{
     
     @IBOutlet weak var saveScoreButton: UIButton!
     
+    @IBOutlet weak var gamesPlayedLabel: UILabel!
+    
+    @IBOutlet weak var averageScoreLabel: UILabel!
     
     // Code to be run when arrived at the view
     override func viewDidLoad() {
@@ -35,11 +38,24 @@ class GameOverViewController : UIViewController, GKGameCenterControllerDelegate{
         localHighscoreLabel.isHidden = true
         saveScoreButton.isHidden = false
         
-        // Update the local stats
-        LocalSaveData.addNewScore(score: latestScore)
+        // Update the saved stats and display in labels
+        UpdateStats()
         
         // Attempt to post the latest score to GameCenter
         tryPostScore()
+        
+    }
+    
+    func UpdateStats(){
+        
+        // Update the local stats
+        LocalSaveData.addNewScore(score: latestScore)
+        
+        let games = LocalSaveData.getGamesPlayed()
+        let avg = LocalSaveData.getAverageScore()
+        
+        gamesPlayedLabel.text = "Games Played: \(games)"
+        averageScoreLabel.text = "Average Score: \(avg)"
         
     }
     

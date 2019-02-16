@@ -89,11 +89,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Average Score: 1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8d-Gu-ZvY">
+                                <rect key="frame" x="56" y="608" width="262" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Games Played:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmT-8e-hsh">
+                                <rect key="frame" x="96" y="567" width="182" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Sbr-it-KUE"/>
                     </view>
                     <connections>
+                        <outlet property="averageScoreLabel" destination="L8d-Gu-ZvY" id="VA8-qU-Fd0"/>
+                        <outlet property="gamesPlayedLabel" destination="JmT-8e-hsh" id="zk8-ya-Phx"/>
                         <outlet property="localHighscoreLabel" destination="5IC-Ar-Qas" id="qH9-02-2MW"/>
                         <outlet property="saveScoreButton" destination="5ig-wF-6ad" id="Hhn-4Z-x3x"/>
                         <outlet property="scoreLabel" destination="Ine-ON-oeG" id="CKJ-Xx-sDP"/>
@@ -301,7 +317,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rm1-81-HYF"/>
-        <segue reference="Q9m-Iv-Dwl"/>
+        <segue reference="LuF-yX-Vhv"/>
+        <segue reference="cTf-co-ELz"/>
     </inferredMetricsTieBreakers>
 </document>
