@@ -137,21 +137,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         print("Setup complete")
     }
     
-    
-    func touchDown(atPoint pos : CGPoint) {
-
-    }
-    
-    func touchMoved(toPoint pos : CGPoint) {
-
-    }
-    
-    func touchUp(atPoint pos : CGPoint) {
-
-    }
-    
-
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         /* Called when a touch begins */
         print("i touched something")
@@ -174,69 +159,92 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if let nameN = node.name {
                 let center = NotificationCenter.default
                 let notification = Notification(name: Notification.Name(rawValue: "fireworkTouched"), object: self)
-                if nameN.hasPrefix("redR"){
-                    exploded(node, color: "red")
-                    let rktNum = (nameN as NSString).substring(from: 4)
-                    let trlNum = "trail\(rktNum)"
-                    if let trail = self.childNode(withName: trlNum){
+                
+                // What is going on? checking if it has prefix color?
+                // Really need to just check if node has R in name. Then extract the color and the value
+                
+                // Check if it is a Rocket for sure
+                if nameN.contains("R") {
+                    // Now extract the rocket colour and its ID
+                    var splitName = nameN.split(separator: "R")
+                    let rocketColour = (String)(splitName[0])
+                    let rocketNumber = splitName[1]
+                    
+                    // Find the corresponding trail name
+                    let trailName = "trail\(rocketNumber)"
+                    
+                    // Create the explosion and remove the trail
+                    exploded(node, color: rocketColour)
+                    if let trail = self.childNode(withName: trailName){
                         trail.removeFromParent()
                     }
+                    
                     center.post(notification)
                 }
-                else if nameN.hasPrefix("orangeR"){
-                    exploded(node, color: "orange")
-                    let rktNum = (nameN as NSString).substring(from: 7)
-                    let trlNum = "trail\(rktNum)"
-                    if let trail = self.childNode(withName: trlNum){
-                        trail.removeFromParent()
-                    }
-                    center.post(notification)
-                }
-                else if nameN.hasPrefix("yellowR"){
-                    exploded(node, color: "yellow")
-                    let rktNum = (nameN as NSString).substring(from: 7)
-                    let trlNum = "trail\(rktNum)"
-                    if let trail = self.childNode(withName: trlNum){
-                        trail.removeFromParent()
-                    }
-                    center.post(notification)
-                }
-                else if nameN.hasPrefix("greenR"){
-                    exploded(node, color: "green")
-                    let rktNum = (nameN as NSString).substring(from: 6)
-                    let trlNum = "trail\(rktNum)"
-                    if let trail = self.childNode(withName: trlNum){
-                        trail.removeFromParent()
-                    }
-                    center.post(notification)
-                }
-                else if nameN.hasPrefix("blueR"){
-                    exploded(node, color: "blue")
-                    let rktNum = (nameN as NSString).substring(from: 5)
-                    let trlNum = "trail\(rktNum)"
-                    if let trail = self.childNode(withName: trlNum){
-                        trail.removeFromParent()
-                    }
-                    center.post(notification)
-                }
-                else if nameN.hasPrefix("purpleR"){
-                    exploded(node, color: "purple")
-                    let rktNum = (nameN as NSString).substring(from: 7)
-                    let trlNum = "trail\(rktNum)"
-                    if let trail = self.childNode(withName: trlNum){
-                        trail.removeFromParent()
-                    }
-                    center.post(notification)
-                }
-                else if nameN.hasPrefix("pinkR"){
-                    exploded(node, color: "pink")
-                    let rktNum = (nameN as NSString).substring(from: 5)
-                    let trlNum = "trail\(rktNum)"
-                    if let trail = self.childNode(withName: trlNum){
-                        trail.removeFromParent()
-                    }
-                    center.post(notification)
-                }
+                
+//                if nameN.hasPrefix("redR"){
+//                    exploded(node, color: "red")
+//                    let rktNum = (nameN as NSString).substring(from: 4)
+//                    let trlNum = "trail\(rktNum)"
+//                    if let trail = self.childNode(withName: trlNum){
+//                        trail.removeFromParent()
+//                    }
+//                    center.post(notification)
+//                }
+//                else if nameN.hasPrefix("orangeR"){
+//                    exploded(node, color: "orange")
+//                    let rktNum = (nameN as NSString).substring(from: 7)
+//                    let trlNum = "trail\(rktNum)"
+//                    if let trail = self.childNode(withName: trlNum){
+//                        trail.removeFromParent()
+//                    }
+//                    center.post(notification)
+//                }
+//                else if nameN.hasPrefix("yellowR"){
+//                    exploded(node, color: "yellow")
+//                    let rktNum = (nameN as NSString).substring(from: 7)
+//                    let trlNum = "trail\(rktNum)"
+//                    if let trail = self.childNode(withName: trlNum){
+//                        trail.removeFromParent()
+//                    }
+//                    center.post(notification)
+//                }
+//                else if nameN.hasPrefix("greenR"){
+//                    exploded(node, color: "green")
+//                    let rktNum = (nameN as NSString).substring(from: 6)
+//                    let trlNum = "trail\(rktNum)"
+//                    if let trail = self.childNode(withName: trlNum){
+//                        trail.removeFromParent()
+//                    }
+//                    center.post(notification)
+//                }
+//                else if nameN.hasPrefix("blueR"){
+//                    exploded(node, color: "blue")
+//                    let rktNum = (nameN as NSString).substring(from: 5)
+//                    let trlNum = "trail\(rktNum)"
+//                    if let trail = self.childNode(withName: trlNum){
+//                        trail.removeFromParent()
+//                    }
+//                    center.post(notification)
+//                }
+//                else if nameN.hasPrefix("purpleR"){
+//                    exploded(node, color: "purple")
+//                    let rktNum = (nameN as NSString).substring(from: 7)
+//                    let trlNum = "trail\(rktNum)"
+//                    if let trail = self.childNode(withName: trlNum){
+//                        trail.removeFromParent()
+//                    }
+//                    center.post(notification)
+//                }
+//                else if nameN.hasPrefix("pinkR"){
+//                    exploded(node, color: "pink")
+//                    let rktNum = (nameN as NSString).substring(from: 5)
+//                    let trlNum = "trail\(rktNum)"
+//                    if let trail = self.childNode(withName: trlNum){
+//                        trail.removeFromParent()
+//                    }
+//                    center.post(notification)
+//                }
             }
         }
     }
@@ -252,6 +260,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         for t in touches { self.touchUp(atPoint: t.location(in: self)) }
     }
+    
+    func touchDown(atPoint pos : CGPoint) {}
+    
+    func touchMoved(toPoint pos : CGPoint) {}
+    
+    func touchUp(atPoint pos : CGPoint) {}
     
     ///////////////////////////////////// Collisions ///////////////////////////////////////////////
     
@@ -295,10 +309,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         timer = nil
     }
     
+    
+    // Game logic
     @objc func handleTimer() {
         // Decrease the interval time between rockets with each rocket (they speed up)
         if gameState!.intervalTime > 0.5{
-            gameState!.intervalTime = gameState!.intervalTime - 0.02
+            gameState!.intervalTime = gameState!.intervalTime - (0.02 * (Double)(gameState!.phase))
         }
         
         // Every 5000 score, increment the 'phase'
@@ -324,8 +340,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func endTheGame() {
         cancelTimer()
-        //scores!.tempScore = model!.score
+        // Clean up the scene
         self.removeAllChildren()
+        // Post the game over notification and attach the score
         let center = NotificationCenter.default
         let notification = Notification(
             name: Notification.Name(rawValue: "goToGameOver"), object: self, userInfo:["score":gameState?.score ?? 0])
@@ -356,96 +373,125 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         explosion.run(explode)
     }
     
+    
+    // Called before each frame is rendered
+    // Important to optimise - version 0.1 started to lag with 5+ rockets at once
     override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
+        
         scoreLabel.text = "\(gameState!.score)"
         livesLabel.text = "\(gameState!.lives) ❤️"
         
-        
+        // Update the position of the flame trails and flip the sprites if necessary
+//        for i in 0...numberOfRockets {
+//            if let trl = self.childNode(withName: "trail\(i)"){
+//                if let red = self.childNode(withName: "redR\(i)"){
+//                    let up = red.physicsBody!.velocity.dy >= 0
+//                    let pos = red.position
+//                    if up {
+//                        trl.position = CGPoint(x: pos.x, y:pos.y)
+//                    }
+//                    else {
+//                        trl.removeFromParent()
+//                        red.yScale = -1
+//                    }
+//                }
+//                else if let yel = self.childNode(withName: "yellowR\(i)"){
+//                    let up = yel.physicsBody!.velocity.dy >= 0
+//                    let pos = yel.position
+//                    if up {
+//                        trl.position = CGPoint(x: pos.x, y:pos.y)
+//                    }
+//                    else {
+//                        trl.removeFromParent()
+//                        yel.yScale = -1
+//                    }
+//                }
+//                else if let ora = self.childNode(withName: "orangeR\(i)"){
+//                    let up = ora.physicsBody!.velocity.dy >= 0
+//                    let pos = ora.position
+//                    if up {
+//                        trl.position = CGPoint(x: pos.x, y:pos.y)
+//                    }
+//                    else {
+//                        trl.removeFromParent()
+//                        ora.yScale = -1
+//                    }
+//                }
+//                else if let grn = self.childNode(withName: "greenR\(i)"){
+//                    let up = grn.physicsBody!.velocity.dy >= 0
+//                    let pos = grn.position
+//                    if up {
+//                        trl.position = CGPoint(x: pos.x, y:pos.y)
+//                    }
+//                    else {
+//                        trl.removeFromParent()
+//                        grn.yScale = -1
+//                    }
+//                }
+//                else if let blu = self.childNode(withName: "blueR\(i)"){
+//                    let up = blu.physicsBody!.velocity.dy >= 0
+//                    let pos = blu.position
+//                    if up {
+//                        trl.position = CGPoint(x: pos.x, y:pos.y)
+//                    }
+//                    else {
+//                        trl.removeFromParent()
+//                        blu.yScale = -1
+//                    }
+//                }
+//                else if let pur = self.childNode(withName: "purpleR\(i)"){
+//                    let up = pur.physicsBody!.velocity.dy >= 0
+//                    let pos = pur.position
+//                    if up {
+//                        trl.position = CGPoint(x: pos.x, y:pos.y)
+//                    }
+//                    else {
+//                        trl.removeFromParent()
+//                        pur.yScale = -1
+//                    }
+//                }
+//                else if let pin = self.childNode(withName: "pinkR\(i)"){
+//                    let up = pin.physicsBody!.velocity.dy >= 0
+//                    let pos = pin.position
+//                    if up {
+//                        trl.position = CGPoint(x: pos.x, y:pos.y)
+//                    }
+//                    else {
+//                        trl.removeFromParent()
+//                        pin.yScale = -1
+//                    }
+        //                }
+        //            }
+        //        }
         // Update the position of the flame trails and flip the sprites if necessary
         for i in 0...numberOfRockets {
+            // Search through the flame trails
             if let trl = self.childNode(withName: "trail\(i)"){
-                if let red = self.childNode(withName: "redR\(i)"){
-                    let up = red.physicsBody!.velocity.dy >= 0
-                    let pos = red.position
-                    if up {
-                        trl.position = CGPoint(x: pos.x, y:pos.y)
-                    }
-                    else {
-                        trl.removeFromParent()
-                        red.yScale = -1
-                    }
+                // Identify the name of the rocket that it is 'attached' to
+                var rocket: SKNode = SKNode()
+                if let red = self.childNode(withName: "redR\(i)"){ rocket = red }
+                else if let yel = self.childNode(withName: "yellowR\(i)"){ rocket = yel }
+                else if let blu = self.childNode(withName: "blueR\(i)"){ rocket = blu }
+                else if let grn = self.childNode(withName: "greenR\(i)"){ rocket = grn }
+                else if let pink = self.childNode(withName: "pinkR\(i)"){ rocket = pink }
+                else if let prp = self.childNode(withName: "purpleR\(i)"){ rocket = prp }
+                else if let ora = self.childNode(withName: "orangeR\(i)"){ rocket = ora }
+                else { print("A rocket trail had no rocket!") }
+                
+                // Either move the trail up or remove it if the rocket is on its descent
+                let up = rocket.physicsBody!.velocity.dy >= 0
+                let pos = rocket.position
+                if up {
+                    trl.position = CGPoint(x: pos.x, y:pos.y)
                 }
-                else if let yel = self.childNode(withName: "yellowR\(i)"){
-                    let up = yel.physicsBody!.velocity.dy >= 0
-                    let pos = yel.position
-                    if up {
-                        trl.position = CGPoint(x: pos.x, y:pos.y)
-                    }
-                    else {
-                        trl.removeFromParent()
-                        yel.yScale = -1
-                    }
-                }
-                else if let ora = self.childNode(withName: "orangeR\(i)"){
-                    let up = ora.physicsBody!.velocity.dy >= 0
-                    let pos = ora.position
-                    if up {
-                        trl.position = CGPoint(x: pos.x, y:pos.y)
-                    }
-                    else {
-                        trl.removeFromParent()
-                        ora.yScale = -1
-                    }
-                }
-                else if let grn = self.childNode(withName: "greenR\(i)"){
-                    let up = grn.physicsBody!.velocity.dy >= 0
-                    let pos = grn.position
-                    if up {
-                        trl.position = CGPoint(x: pos.x, y:pos.y)
-                    }
-                    else {
-                        trl.removeFromParent()
-                        grn.yScale = -1
-                    }
-                }
-                else if let blu = self.childNode(withName: "blueR\(i)"){
-                    let up = blu.physicsBody!.velocity.dy >= 0
-                    let pos = blu.position
-                    if up {
-                        trl.position = CGPoint(x: pos.x, y:pos.y)
-                    }
-                    else {
-                        trl.removeFromParent()
-                        blu.yScale = -1
-                    }
-                }
-                else if let pur = self.childNode(withName: "purpleR\(i)"){
-                    let up = pur.physicsBody!.velocity.dy >= 0
-                    let pos = pur.position
-                    if up {
-                        trl.position = CGPoint(x: pos.x, y:pos.y)
-                    }
-                    else {
-                        trl.removeFromParent()
-                        pur.yScale = -1
-                    }
-                }
-                else if let pin = self.childNode(withName: "pinkR\(i)"){
-                    let up = pin.physicsBody!.velocity.dy >= 0
-                    let pos = pin.position
-                    if up {
-                        trl.position = CGPoint(x: pos.x, y:pos.y)
-                    }
-                    else {
-                        trl.removeFromParent()
-                        pin.yScale = -1
-                    }
+                else {
+                    trl.removeFromParent()
+                    rocket.yScale = -1
                 }
             }
         }
     }
-    
+                
     // Decide what kind of rocket to fire
     func setUpNewRocket() {
         // http://stackoverflow.com/questions/24007129/how-does-one-generate-a-random-number-in-apples-swift-language

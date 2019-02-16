@@ -18,7 +18,8 @@ class MainMenuViewController : UIViewController {
         
         // Set up any programmatic text or elements for the MainMenu here
         
-        // Maybe load the saved data here?
+        // Perform the first time check for local saved data
+        LocalSaveData.firstTimeCheck()
         
     }
     
