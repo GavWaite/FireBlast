@@ -62,6 +62,25 @@ class StatsViewController : UIViewController {
     }
     
     @IBAction func resetButtonPressed() {
+        
+        //1. Create the alert controller.
+        let alert = UIAlertController(title: "Are you sure?", message: "All local stats and highscores will be lost", preferredStyle: .alert)
+        
+        // 3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { [weak alert] (_) in
+            self.confirmResetStats()
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .default, handler: { [weak alert] (_) in
+            // Do nothing
+        }))
+        
+        // 4. Present the alert.
+        self.present(alert, animated: true, completion: nil)
+        
+        
+    }
+    
+    func confirmResetStats(){
         LocalSaveData.resetAllStatistics()
         updateLabels()
     }

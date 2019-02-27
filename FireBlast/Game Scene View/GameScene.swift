@@ -22,6 +22,12 @@ let fireFast = SKAction.moveTo(y: 20, duration: 1)
 let death = SKAction.removeFromParent()
 let wait = SKAction.wait(forDuration: 4)
 let explode = SKAction.sequence([wait, death])
+let shortWait = SKAction.wait(forDuration: 2)
+let DURATION = 0.7
+let countdownWait2 = SKAction.wait(forDuration: DURATION)
+let countdownWait1 = SKAction.wait(forDuration: 2*DURATION)
+let countdownWait0 = SKAction.wait(forDuration: 3*DURATION)
+let countdownWaitFB = SKAction.wait(forDuration: 5*DURATION)
 
 
 
@@ -49,7 +55,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let scoreLabel = SKLabelNode(fontNamed:"Helvetica")
     let livesLabel = SKLabelNode(fontNamed:"Helvetica")
     let timerLabel = SKLabelNode(fontNamed:"Helvetica")
-    //let launch = SKLabelNode(fontNamed:"Helvetica")
+    let launch = SKLabelNode(fontNamed:"DIN Condensed")
     
     // Load the game state model
     var gameState: GameState?
@@ -65,7 +71,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     // Set the sprite sizes for the rockets
     var rocketSize = CGSize(width: 50, height: 80)
     
-    
+    // Set up the screen and begin the game!
     override func sceneDidLoad() {
         
         // Rocket size scaling calculation
@@ -116,12 +122,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         print("Added timer label")
         
         // Add debug launch button
-//        launch.text = "Tap to begin";
-//        launch.name = "launch"
-//        launch.fontSize = 30;
-//        launch.fontColor = UIColor.white
-//        launch.position = CGPoint(x:self.frame.midX, y: self.frame.midY);
-//        self.addChild(launch)
+        launch.text = "3";
+        launch.name = "launch"
+        launch.fontSize = 70;
+        launch.fontColor = UIColor.white
+        launch.position = CGPoint(x:self.frame.midX, y: self.frame.midY);
+        self.addChild(launch)
         
         print("Added launch button")
         
@@ -144,26 +150,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         print("Setup complete")
         
+        play321FB()
         activateStartTimer()
+        run(countdownWait2, completion:  {self.launch.text = "2" })
+        run(countdownWait1, completion: {self.launch.text = "1" })
+        run(countdownWait0, completion:  {self.launch.text = "Fire Blast!"})
+        run(countdownWaitFB, completion:  {self.launch.removeFromParent()})
+        
     }
     
+    // User touch handling
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         /* Called when a touch begins */
-        print("i touched something")
         
         for touch in touches {
             
             let location = touch.location(in: self)
             let node = self.atPoint(location)
             
-//            if node.name == "launch"{
-////                launch.isHidden = true
-////                launch.removeFromParent()
-//                activateTimer()
-//                print("I have pressed the launch button!")
-//            }
-            
-
             // A rocket has been tapped to explode
             // As a named node has been tapped, safe to assume it is a rocket
             if let nameN = node.name {
@@ -315,10 +319,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let rand_positive = Int(arc4random_uniform(UInt32(VARIABILITY*2)))
         let rand_around_zero = rand_positive - VARIABILITY
         let percentageChange: Double = (Double)(rand_around_zero) / 100.0
-        //let percentageChange = (Double)(arc4random_uniform(100) - 50) / 100.0 // Value between -0.50 and 0.50
-        print("PercentageChange = \(percentageChange)")
+
         let randomTimeInterval = gameState!.intervalTime + (gameState!.intervalTime * percentageChange)
-        print("RandomTimer = \(randomTimeInterval)")
+
         timer = Timer.scheduledTimer(timeInterval: randomTimeInterval, target: self,
                                      selector: #selector(GameScene.handleTimer), userInfo: nil, repeats: true)
     }
@@ -349,10 +352,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             gameState!.intervalTime = gameState!.intervalTime - (PERCENTAGE_DECREASE*gameState!.intervalTime)
         }
         
-        // Every 5000 score, increment the 'phase'
+        // Every XXXX score, increment the 'phase'
         if gameState!.score / gameState!.phase > PHASE_BOUNDARY {
             gameState!.phase += 1
-            //gameState!.intervalTime = 1.5
         }
         
         setUpNewRocket()
@@ -370,6 +372,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func endTheGame() {
         cancelTimer()
+        
+        playGameOver()
+        
+        run(shortWait)
+        
         // Clean up the scene
         self.removeAllChildren()
         
@@ -521,7 +528,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let trail: SKEmitterNode
         
         // Initialise the rocket, depending on the color
-        
         // Special Rocket is skull or time
         
         let rktName: String = "\(color)Rocket"
@@ -579,9 +585,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let maxVel = Double(round(sqrt(frameHeight*20)))
         let initialVel = Int(round(maxVel*0.8))
         let randomVel = Int(maxVel) - initialVel
-        //println("Frame: \(frameHeight), Velocity = \(initialVel) + \(randomVel)")
         let velocity = CGFloat(initialVel + Int(arc4random_uniform(UInt32(randomVel))))
-        //println("Rocket \(rocket.name) of mass \(rocket.physicsBody!.mass) launched with velocity \(velocity)")
         rocket.physicsBody!.velocity.dy = velocity
         playLaunch()
     }
@@ -613,12 +617,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         numberOfRockets += 1
         
-        // Add the rocket and apply a random vertical force to it
+        // Add the balloon to the scene
         self.addChild(balloon)
-        //println("Rocket \(rocket.name) of mass \(rocket.physicsBody!.mass) launched with velocity \(velocity)")
-//        balloon.physicsBody!.velocity.dy = 0.0
-        
-        //playLaunch()
     }
     
     
@@ -649,5 +649,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func playSlowTime(){
         let slowFile = "slow.wav"
         run(SKAction.playSoundFileNamed(slowFile, waitForCompletion: false))
+    }
+    func play321FB(){
+        let welcomeFile = "321_FireBlast.wav"
+        run(SKAction.playSoundFileNamed(welcomeFile, waitForCompletion: false))
+    }
+    
+    func playGameOver(){
+        let goFile = "GameOver.wav"
+        run(SKAction.playSoundFileNamed(goFile, waitForCompletion: false))
     }
 }

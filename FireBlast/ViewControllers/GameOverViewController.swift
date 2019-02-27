@@ -20,13 +20,11 @@ class GameOverViewController : UIViewController, GKGameCenterControllerDelegate{
     
     @IBOutlet weak var saveScoreButton: UIButton!
     
-    @IBOutlet weak var gamesPlayedLabel: UILabel!
-    
-    @IBOutlet weak var averageScoreLabel: UILabel!
     
     // Code to be run when arrived at the view
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         // Attempt to authenticate the user for GameCenter
         authenticateUser()
@@ -51,11 +49,11 @@ class GameOverViewController : UIViewController, GKGameCenterControllerDelegate{
         // Update the local stats
         LocalSaveData.addNewScore(score: latestScore)
         
-        let games = LocalSaveData.getGamesPlayed()
-        let avg = LocalSaveData.getAverageScore()
-        
-        gamesPlayedLabel.text = "Games Played: \(games)"
-        averageScoreLabel.text = "Average Score: \(avg)"
+//        let games = LocalSaveData.getGamesPlayed()
+//        let avg = LocalSaveData.getAverageScore()
+//        
+//        gamesPlayedLabel.text = "Games Played: \(games)"
+//        averageScoreLabel.text = "Average Score: \(avg)"
         
     }
     
@@ -80,7 +78,8 @@ class GameOverViewController : UIViewController, GKGameCenterControllerDelegate{
         
         //2. Add the text field. You can configure it however you need.
         alert.addTextField { (textField) in
-            textField.text = "Your name"
+            textField.text = ""
+            textField.autocapitalizationType = .words
         }
         
         // 3. Grab the value from the text field, and print it when the user clicks OK.
