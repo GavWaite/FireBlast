@@ -9,6 +9,23 @@
 /* Begin PBXBuildFile section */
 		AD002EFD221779730092121D /* LocalSaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD002EFC221779730092121D /* LocalSaveData.swift */; };
 		AD002F00221793FD0092121D /* LocalHighScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD002EFF221793FD0092121D /* LocalHighScoreCell.swift */; };
+		AD002F0C221A00E20092121D /* bang-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = AD002F01221A00E10092121D /* bang-1.wav */; };
+		AD002F0D221A00E20092121D /* pew-5.wav in Resources */ = {isa = PBXBuildFile; fileRef = AD002F02221A00E10092121D /* pew-5.wav */; };
+		AD002F0E221A00E20092121D /* bang-2.wav in Resources */ = {isa = PBXBuildFile; fileRef = AD002F03221A00E10092121D /* bang-2.wav */; };
+		AD002F0F221A00E20092121D /* pew-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = AD002F04221A00E10092121D /* pew-1.wav */; };
+		AD002F10221A00E20092121D /* pew-3.wav in Resources */ = {isa = PBXBuildFile; fileRef = AD002F05221A00E10092121D /* pew-3.wav */; };
+		AD002F11221A00E20092121D /* bang-5.wav in Resources */ = {isa = PBXBuildFile; fileRef = AD002F06221A00E10092121D /* bang-5.wav */; };
+		AD002F12221A00E20092121D /* pew-4.wav in Resources */ = {isa = PBXBuildFile; fileRef = AD002F07221A00E10092121D /* pew-4.wav */; };
+		AD002F13221A00E20092121D /* bang-4.wav in Resources */ = {isa = PBXBuildFile; fileRef = AD002F08221A00E20092121D /* bang-4.wav */; };
+		AD002F14221A00E20092121D /* bang-3.wav in Resources */ = {isa = PBXBuildFile; fileRef = AD002F09221A00E20092121D /* bang-3.wav */; };
+		AD002F15221A00E20092121D /* pew-2.wav in Resources */ = {isa = PBXBuildFile; fileRef = AD002F0A221A00E20092121D /* pew-2.wav */; };
+		AD002F16221A00E20092121D /* pew-6.wav in Resources */ = {isa = PBXBuildFile; fileRef = AD002F0B221A00E20092121D /* pew-6.wav */; };
+		AD002F1A221A16260092121D /* ohno-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = AD002F19221A16260092121D /* ohno-1.wav */; };
+		AD002F1D221A1B760092121D /* TimeRocketEffect.sks in Resources */ = {isa = PBXBuildFile; fileRef = AD002F1B221A1B750092121D /* TimeRocketEffect.sks */; };
+		AD002F1E221A1B760092121D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD002F1C221A1B750092121D /* Assets.xcassets */; };
+		AD002F20221A1CCA0092121D /* BombRocketEffect.sks in Resources */ = {isa = PBXBuildFile; fileRef = AD002F1F221A1CCA0092121D /* BombRocketEffect.sks */; };
+		AD002F22221A35DA0092121D /* life.wav in Resources */ = {isa = PBXBuildFile; fileRef = AD002F21221A35DA0092121D /* life.wav */; };
+		AD002F24221A371A0092121D /* slow.wav in Resources */ = {isa = PBXBuildFile; fileRef = AD002F23221A371A0092121D /* slow.wav */; };
 		AD8FB914221128AA0021CD4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8FB913221128AA0021CD4F /* AppDelegate.swift */; };
 		AD8FB916221128AA0021CD4F /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = AD8FB915221128AA0021CD4F /* GameScene.sks */; };
 		AD8FB918221128AA0021CD4F /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = AD8FB917221128AA0021CD4F /* Actions.sks */; };
@@ -23,7 +40,7 @@
 		AD8FB94C2213C3470021CD4F /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8FB94B2213C3470021CD4F /* MainMenuViewController.swift */; };
 		AD8FB94F2213D1C30021CD4F /* HighscoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8FB94E2213D1C30021CD4F /* HighscoresViewController.swift */; };
 		AD8FB9512213D1F50021CD4F /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8FB9502213D1F50021CD4F /* TutorialViewController.swift */; };
-		AD8FB9532213D2140021CD4F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8FB9522213D2140021CD4F /* SettingsViewController.swift */; };
+		AD8FB9532213D2140021CD4F /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8FB9522213D2140021CD4F /* StatsViewController.swift */; };
 		AD8FB9552213D2330021CD4F /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8FB9542213D2330021CD4F /* GameOverViewController.swift */; };
 		AD8FB9572214EA790021CD4F /* EmitterPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8FB9562214EA790021CD4F /* EmitterPaths.swift */; };
 		AD8FB9622214EAC70021CD4F /* flameTrail.sks in Resources */ = {isa = PBXBuildFile; fileRef = AD8FB9592214EAC60021CD4F /* flameTrail.sks */; };
@@ -38,6 +55,12 @@
 		AD8FB96E2214FC900021CD4F /* RedFireworksSparks.sks in Resources */ = {isa = PBXBuildFile; fileRef = AD8FB96D2214FC900021CD4F /* RedFireworksSparks.sks */; };
 		AD8FB9702216154A0021CD4F /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = AD8FB96F2216154A0021CD4F /* spark.png */; };
 		AD8FB97322161AFC0021CD4F /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD8FB97222161AFC0021CD4F /* GameKit.framework */; };
+		ADDF44F72226386500DF6B04 /* FB_Logo_alpha.png in Resources */ = {isa = PBXBuildFile; fileRef = ADDF44F22226386400DF6B04 /* FB_Logo_alpha.png */; };
+		ADDF44F82226386500DF6B04 /* FreezeBalloon.afdesign in Resources */ = {isa = PBXBuildFile; fileRef = ADDF44F32226386400DF6B04 /* FreezeBalloon.afdesign */; };
+		ADDF44F92226386500DF6B04 /* AppLogo.afdesign in Resources */ = {isa = PBXBuildFile; fileRef = ADDF44F42226386400DF6B04 /* AppLogo.afdesign */; };
+		ADDF44FA2226386500DF6B04 /* HeartBalloon.afdesign in Resources */ = {isa = PBXBuildFile; fileRef = ADDF44F52226386400DF6B04 /* HeartBalloon.afdesign */; };
+		ADDF44FB2226386500DF6B04 /* BombRocket.afdesign in Resources */ = {isa = PBXBuildFile; fileRef = ADDF44F62226386400DF6B04 /* BombRocket.afdesign */; };
+		ADDF44FD2226393D00DF6B04 /* c7nazara.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ADDF44FC2226393D00DF6B04 /* c7nazara.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +83,23 @@
 /* Begin PBXFileReference section */
 		AD002EFC221779730092121D /* LocalSaveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSaveData.swift; sourceTree = "<group>"; };
 		AD002EFF221793FD0092121D /* LocalHighScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalHighScoreCell.swift; sourceTree = "<group>"; };
+		AD002F01221A00E10092121D /* bang-1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "bang-1.wav"; sourceTree = "<group>"; };
+		AD002F02221A00E10092121D /* pew-5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "pew-5.wav"; sourceTree = "<group>"; };
+		AD002F03221A00E10092121D /* bang-2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "bang-2.wav"; sourceTree = "<group>"; };
+		AD002F04221A00E10092121D /* pew-1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "pew-1.wav"; sourceTree = "<group>"; };
+		AD002F05221A00E10092121D /* pew-3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "pew-3.wav"; sourceTree = "<group>"; };
+		AD002F06221A00E10092121D /* bang-5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "bang-5.wav"; sourceTree = "<group>"; };
+		AD002F07221A00E10092121D /* pew-4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "pew-4.wav"; sourceTree = "<group>"; };
+		AD002F08221A00E20092121D /* bang-4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "bang-4.wav"; sourceTree = "<group>"; };
+		AD002F09221A00E20092121D /* bang-3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "bang-3.wav"; sourceTree = "<group>"; };
+		AD002F0A221A00E20092121D /* pew-2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "pew-2.wav"; sourceTree = "<group>"; };
+		AD002F0B221A00E20092121D /* pew-6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "pew-6.wav"; sourceTree = "<group>"; };
+		AD002F19221A16260092121D /* ohno-1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "ohno-1.wav"; sourceTree = "<group>"; };
+		AD002F1B221A1B750092121D /* TimeRocketEffect.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TimeRocketEffect.sks; sourceTree = "<group>"; };
+		AD002F1C221A1B750092121D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AD002F1F221A1CCA0092121D /* BombRocketEffect.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BombRocketEffect.sks; sourceTree = "<group>"; };
+		AD002F21221A35DA0092121D /* life.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = life.wav; sourceTree = "<group>"; };
+		AD002F23221A371A0092121D /* slow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = slow.wav; sourceTree = "<group>"; };
 		AD8FB910221128AA0021CD4F /* FireBlast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireBlast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD8FB913221128AA0021CD4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD8FB915221128AA0021CD4F /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -80,7 +120,7 @@
 		AD8FB94B2213C3470021CD4F /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		AD8FB94E2213D1C30021CD4F /* HighscoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighscoresViewController.swift; sourceTree = "<group>"; };
 		AD8FB9502213D1F50021CD4F /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
-		AD8FB9522213D2140021CD4F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		AD8FB9522213D2140021CD4F /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		AD8FB9542213D2330021CD4F /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		AD8FB9562214EA790021CD4F /* EmitterPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterPaths.swift; sourceTree = "<group>"; };
 		AD8FB9592214EAC60021CD4F /* flameTrail.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = flameTrail.sks; sourceTree = "<group>"; };
@@ -95,6 +135,12 @@
 		AD8FB96D2214FC900021CD4F /* RedFireworksSparks.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RedFireworksSparks.sks; sourceTree = "<group>"; };
 		AD8FB96F2216154A0021CD4F /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		AD8FB97222161AFC0021CD4F /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		ADDF44F22226386400DF6B04 /* FB_Logo_alpha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FB_Logo_alpha.png; sourceTree = "<group>"; };
+		ADDF44F32226386400DF6B04 /* FreezeBalloon.afdesign */ = {isa = PBXFileReference; lastKnownFileType = file; path = FreezeBalloon.afdesign; sourceTree = "<group>"; };
+		ADDF44F42226386400DF6B04 /* AppLogo.afdesign */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppLogo.afdesign; sourceTree = "<group>"; };
+		ADDF44F52226386400DF6B04 /* HeartBalloon.afdesign */ = {isa = PBXFileReference; lastKnownFileType = file; path = HeartBalloon.afdesign; sourceTree = "<group>"; };
+		ADDF44F62226386400DF6B04 /* BombRocket.afdesign */ = {isa = PBXFileReference; lastKnownFileType = file; path = BombRocket.afdesign; sourceTree = "<group>"; };
+		ADDF44FC2226393D00DF6B04 /* c7nazara.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = c7nazara.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				AD8FB91D221128AA0021CD4F /* Main.storyboard */,
+				ADDF44F12226386400DF6B04 /* Affinity_RocketMasters */,
 				AD8FB913221128AA0021CD4F /* AppDelegate.swift */,
 				AD8FB9472213B94D0021CD4F /* Models */,
 				AD8FB94D2213C4050021CD4F /* Game Scene View */,
@@ -206,7 +253,7 @@
 				AD8FB9542213D2330021CD4F /* GameOverViewController.swift */,
 				AD8FB94E2213D1C30021CD4F /* HighscoresViewController.swift */,
 				AD8FB9502213D1F50021CD4F /* TutorialViewController.swift */,
-				AD8FB9522213D2140021CD4F /* SettingsViewController.swift */,
+				AD8FB9522213D2140021CD4F /* StatsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -223,6 +270,7 @@
 		AD8FB9582214EA940021CD4F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ADDF44FC2226393D00DF6B04 /* c7nazara.ttf */,
 				AD8FB96C2214EADE0021CD4F /* Particle Effects */,
 				AD8FB96B2214EACE0021CD4F /* Sound Effects */,
 			);
@@ -232,6 +280,20 @@
 		AD8FB96B2214EACE0021CD4F /* Sound Effects */ = {
 			isa = PBXGroup;
 			children = (
+				AD002F23221A371A0092121D /* slow.wav */,
+				AD002F21221A35DA0092121D /* life.wav */,
+				AD002F19221A16260092121D /* ohno-1.wav */,
+				AD002F01221A00E10092121D /* bang-1.wav */,
+				AD002F03221A00E10092121D /* bang-2.wav */,
+				AD002F09221A00E20092121D /* bang-3.wav */,
+				AD002F08221A00E20092121D /* bang-4.wav */,
+				AD002F06221A00E10092121D /* bang-5.wav */,
+				AD002F05221A00E10092121D /* pew-3.wav */,
+				AD002F07221A00E10092121D /* pew-4.wav */,
+				AD002F02221A00E10092121D /* pew-5.wav */,
+				AD002F0B221A00E20092121D /* pew-6.wav */,
+				AD002F04221A00E10092121D /* pew-1.wav */,
+				AD002F0A221A00E20092121D /* pew-2.wav */,
 				AD8FB95D2214EAC60021CD4F /* 75328__oddworld__oddworld-explosionecho.wav */,
 				AD8FB95E2214EAC60021CD4F /* 202230__deraj__pop-sound.wav */,
 			);
@@ -241,6 +303,7 @@
 		AD8FB96C2214EADE0021CD4F /* Particle Effects */ = {
 			isa = PBXGroup;
 			children = (
+				AD002F1F221A1CCA0092121D /* BombRocketEffect.sks */,
 				AD8FB96F2216154A0021CD4F /* spark.png */,
 				AD8FB96D2214FC900021CD4F /* RedFireworksSparks.sks */,
 				AD8FB95F2214EAC70021CD4F /* BlueFireworksSparks.sks */,
@@ -250,6 +313,8 @@
 				AD8FB9602214EAC70021CD4F /* PinkFireworksSparks.sks */,
 				AD8FB95B2214EAC60021CD4F /* PurpleFireworksSparks.sks */,
 				AD8FB9612214EAC70021CD4F /* YellowFireworksSparks.sks */,
+				AD002F1B221A1B750092121D /* TimeRocketEffect.sks */,
+				AD002F1C221A1B750092121D /* Assets.xcassets */,
 			);
 			path = "Particle Effects";
 			sourceTree = "<group>";
@@ -261,6 +326,18 @@
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
+		};
+		ADDF44F12226386400DF6B04 /* Affinity_RocketMasters */ = {
+			isa = PBXGroup;
+			children = (
+				ADDF44F22226386400DF6B04 /* FB_Logo_alpha.png */,
+				ADDF44F32226386400DF6B04 /* FreezeBalloon.afdesign */,
+				ADDF44F42226386400DF6B04 /* AppLogo.afdesign */,
+				ADDF44F52226386400DF6B04 /* HeartBalloon.afdesign */,
+				ADDF44F62226386400DF6B04 /* BombRocket.afdesign */,
+			);
+			path = Affinity_RocketMasters;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -371,19 +448,42 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADDF44FD2226393D00DF6B04 /* c7nazara.ttf in Resources */,
 				AD8FB96A2214EAC70021CD4F /* YellowFireworksSparks.sks in Resources */,
+				ADDF44F92226386500DF6B04 /* AppLogo.afdesign in Resources */,
 				AD8FB9672214EAC70021CD4F /* 202230__deraj__pop-sound.wav in Resources */,
+				AD002F11221A00E20092121D /* bang-5.wav in Resources */,
+				AD002F1D221A1B760092121D /* TimeRocketEffect.sks in Resources */,
+				AD002F22221A35DA0092121D /* life.wav in Resources */,
+				AD002F1E221A1B760092121D /* Assets.xcassets in Resources */,
+				AD002F10221A00E20092121D /* pew-3.wav in Resources */,
+				ADDF44F72226386500DF6B04 /* FB_Logo_alpha.png in Resources */,
 				AD8FB9642214EAC70021CD4F /* PurpleFireworksSparks.sks in Resources */,
+				AD002F0E221A00E20092121D /* bang-2.wav in Resources */,
+				AD002F20221A1CCA0092121D /* BombRocketEffect.sks in Resources */,
 				AD8FB9682214EAC70021CD4F /* BlueFireworksSparks.sks in Resources */,
+				AD002F13221A00E20092121D /* bang-4.wav in Resources */,
+				AD002F0F221A00E20092121D /* pew-1.wav in Resources */,
 				AD8FB91F221128AA0021CD4F /* Main.storyboard in Resources */,
+				AD002F0D221A00E20092121D /* pew-5.wav in Resources */,
+				ADDF44F82226386500DF6B04 /* FreezeBalloon.afdesign in Resources */,
 				AD8FB916221128AA0021CD4F /* GameScene.sks in Resources */,
+				AD002F1A221A16260092121D /* ohno-1.wav in Resources */,
+				AD002F15221A00E20092121D /* pew-2.wav in Resources */,
 				AD8FB921221128AB0021CD4F /* Assets.xcassets in Resources */,
 				AD8FB924221128AB0021CD4F /* LaunchScreen.storyboard in Resources */,
+				AD002F12221A00E20092121D /* pew-4.wav in Resources */,
 				AD8FB9692214EAC70021CD4F /* PinkFireworksSparks.sks in Resources */,
+				AD002F0C221A00E20092121D /* bang-1.wav in Resources */,
+				ADDF44FB2226386500DF6B04 /* BombRocket.afdesign in Resources */,
 				AD8FB9662214EAC70021CD4F /* 75328__oddworld__oddworld-explosionecho.wav in Resources */,
 				AD8FB9622214EAC70021CD4F /* flameTrail.sks in Resources */,
+				AD002F14221A00E20092121D /* bang-3.wav in Resources */,
 				AD8FB9652214EAC70021CD4F /* GreenFireworksSparks.sks in Resources */,
+				AD002F24221A371A0092121D /* slow.wav in Resources */,
+				ADDF44FA2226386500DF6B04 /* HeartBalloon.afdesign in Resources */,
 				AD8FB96E2214FC900021CD4F /* RedFireworksSparks.sks in Resources */,
+				AD002F16221A00E20092121D /* pew-6.wav in Resources */,
 				AD8FB9702216154A0021CD4F /* spark.png in Resources */,
 				AD8FB9632214EAC70021CD4F /* OrangeFireworksSparks.sks in Resources */,
 				AD8FB918221128AA0021CD4F /* Actions.sks in Resources */,
@@ -418,7 +518,7 @@
 				AD8FB914221128AA0021CD4F /* AppDelegate.swift in Sources */,
 				AD8FB9492213B9870021CD4F /* GameState.swift in Sources */,
 				AD8FB94F2213D1C30021CD4F /* HighscoresViewController.swift in Sources */,
-				AD8FB9532213D2140021CD4F /* SettingsViewController.swift in Sources */,
+				AD8FB9532213D2140021CD4F /* StatsViewController.swift in Sources */,
 				AD8FB9552213D2330021CD4F /* GameOverViewController.swift in Sources */,
 				AD8FB9572214EA790021CD4F /* EmitterPaths.swift in Sources */,
 				AD002F00221793FD0092121D /* LocalHighScoreCell.swift in Sources */,

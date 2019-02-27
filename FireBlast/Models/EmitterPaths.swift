@@ -19,6 +19,8 @@ class EmitterPaths {
         "purple" : Bundle.main.path(forResource: "PurpleFireworksSparks", ofType: "sks")!,
         "orange" : Bundle.main.path(forResource: "OrangeFireworksSparks", ofType: "sks")!,
         "blue" : Bundle.main.path(forResource: "BlueFireworksSparks", ofType: "sks")!,
+        "skull" : Bundle.main.path(forResource: "BombRocketEffect", ofType: "sks")!,
+        "time" : Bundle.main.path(forResource: "TimeRocketEffect", ofType: "sks")!,
         "trail" : Bundle.main.path(forResource: "flameTrail", ofType: "sks")!
     ]
 }
