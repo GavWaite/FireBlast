@@ -21,6 +21,9 @@ class MainMenuViewController : UIViewController {
         // Perform the first time check for local saved data
         LocalSaveData.firstTimeCheck()
         
+        // Ensure no null data
+        LocalSaveData.nullCheck()
+        
     }
     
     // Could I add a system to go to tutorial the first time you press Play?

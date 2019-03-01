@@ -10,6 +10,7 @@ import Foundation
 
 let firstTimeKey = "FIRST_TIME"
 let localHighscoresKey = "LOCAL_HIGHSCORES"
+
 let gamesPlayedKey = "GAMES_PLAYED"
 let averageScoreKey = "AVERAGE_SCORE"
 
@@ -24,6 +25,9 @@ let pinkRocketsKey = "PINK_ROCKETS"
 let heartBalloonsKey = "HEART_BALLOONS"
 let skullRocketsKey = "SKULL_ROCKETS"
 let timeRocketsKey = "TIME_ROCKETS"
+
+let zero_keys = [gamesPlayedKey, averageScoreKey, redRocketsKey,orangeRocketsKey,yellowRocketsKey,
+greenRocketsKey,blueRocketsKey,purpleRocketsKey,pinkRocketsKey,heartBalloonsKey,skullRocketsKey,timeRocketsKey]
 
 struct RocketCounts {
     var red: Int = 0
@@ -105,6 +109,21 @@ struct LocalSaveData {
         defaults.setValue(0, forKey: timeRocketsKey)
         
         print("Reset all Stats")
+    }
+    
+    static func nullCheck() {
+        let defaults = UserDefaults.standard
+        
+        // Iterate through all keys which should init as zero and make sure
+        // that if they are null that they are reset to zero
+        for key in zero_keys {
+            if let _ = defaults.value(forKey: key){}
+            else {
+                defaults.setValue(0, forKey: key)
+            }
+        }
+        
+        
     }
     
     static func updateRocketCount(new: RocketCounts){
