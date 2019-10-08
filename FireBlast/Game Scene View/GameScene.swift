@@ -279,13 +279,34 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Direction 1.0 means straight down, as apposed to the -1.0 when rocket launches
         // So this is where a rocket falls out of the screen - a 'miss'
         if direction == 1.0 {
-            b.node!.removeFromParent()
-            if b.node!.name!.contains("skull"){}
-            else if b.node!.name!.contains("time"){}
-            else if b.node!.name!.contains("life"){}
-            else {
-                lostALife()
+            
+            if let nodeName = b.node!.name {
+                
+                // Testing this approach because was unwrapping nil as node name upon special rockets falling off screen
+                b.node!.removeFromParent()
+                if nodeName.contains("skull"){}
+                else if nodeName.contains("time"){}
+                else if nodeName.contains("life"){}
+                else {
+                    lostALife()
+                }
+                
             }
+            else {
+                b.node!.removeFromParent()
+                print("Node \(b.node!) has nil name")
+            }
+            
+            //ORIGINAL
+//            b.node!.removeFromParent()
+//            if b.node!.name.contains("skull"){}
+//            else if b.node!.name.contains("time"){}
+//            else if b.node!.name.contains("life"){}
+//            else {
+//                lostALife()
+//            }
+            
+            
         }
     }
     

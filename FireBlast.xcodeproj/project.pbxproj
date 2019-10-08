@@ -700,7 +700,7 @@
 		AD8FB93F221128AC0021CD4F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-New";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FCQHJR525J;
 				INFOPLIST_FILE = FireBlast/Info.plist;
@@ -718,7 +718,7 @@
 		AD8FB940221128AC0021CD4F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-New";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FCQHJR525J;
 				INFOPLIST_FILE = FireBlast/Info.plist;
